@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esteban Peralta | Agente de Seguros e Inversiones</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a2e; background: #fff; }
+    a { text-decoration: none; }
+    .wabtn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #1a3a6b; color: #e8eaf0;
+      border: none; border-radius: 8px;
+      padding: 14px 28px; font-size: 15px; font-weight: 500;
+      cursor: pointer; transition: background 0.2s;
+    }
+    .wabtn:hover { background: #0f2550; }
+    .wabtn-lg { padding: 18px 36px; font-size: 17px; border-radius: 10px; }
+    .section { padding: 3rem 2rem; }
+    .container { max-width: 860px; margin: 0 auto; }
+    .tag { display: inline-block; background: #c0c8d8; color: #0d1f40; font-size: 12px; font-weight: 500; border-radius: 20px; padding: 4px 14px; margin-bottom: 12px; letter-spacing: 0.04em; text-transform: uppercase; }
+    .divider { border: none; border-top: 0.5px solid #c0c8d8; margin: 0; }
+    .card { background: #f4f6fa; border: 0.5px solid #b0bcd4; border-radius: 12px; padding: 1.5rem; }
+    .stat { text-align: center; }
+    .stat-num { font-size: 28px; font-weight: 500; color: #b8c8e8; }
+    .stat-label { font-size: 13px; color: #8a9ec0; margin-top: 4px; }
+    input[type=range] { width: 100%; accent-color: #1a3a6b; }
+    input[type=text], input[type=number], select {
+      width: 100%; padding: 10px 12px; border: 0.5px solid #b0bcd4;
+      border-radius: 8px; font-size: 14px; background: #fff; color: #0d1f40;
+      outline: none; font-family: inherit;
+    }
+    input:focus, select:focus { border-color: #1a3a6b; }
+    @media (max-width: 600px) {
+      .grid-2 { grid-template-columns: 1fr !important; }
+      .wabtn-lg { width: 100%; justify-content: center; }
+      .stats-grid { grid-template-columns: 1fr !important; gap: 0.75rem !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div style="background: #0d1f40; padding: 4rem 2rem 3rem; text-align: center; border-bottom: 3px solid #4a6fa5;">
+  <div style="max-width: 700px; margin: 0 auto;">
+    <div style="width: 72px; height: 72px; border-radius: 50%; background: #1a3a6b; border: 2px solid #4a6fa5; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 26px; font-weight: 500; color: #b8c8e8;">EP</div>
+    <span class="tag" style="background: #1a3a6b; color: #b8c8e8;">Seguros e Inversiones</span>
+    <h1 style="font-size: 30px; font-weight: 500; color: #e8edf5; margin: 0.75rem 0 0.5rem; line-height: 1.3;">Esteban Peralta</h1>
+    <p style="font-size: 16px; color: #8a9ec0; margin-bottom: 1rem;">Agente de Seguros e Inversiones</p>
+    <p style="font-size: 18px; color: #c0cfe8; line-height: 1.6; margin-bottom: 2rem;">Protege tu vida, asegura tu futuro y haz crecer tu patrimonio con los mejores planes del mercado internacional.</p>
+    <a href="https://wa.me/51960112040?text=Hola%20Esteban,%20me%20interesa%20conocer%20más%20sobre%20los%20planes%20de%20seguros%20e%20inversiones." class="wabtn wabtn-lg" target="_blank">
+      <i class="ti ti-brand-whatsapp" style="font-size: 22px;"></i>
+      Contáctame por WhatsApp
+    </a>
+    <p style="font-size: 13px; color: #5a7090; margin-top: 1rem;">Respuesta en menos de 24 horas · Sin compromiso</p>
+  </div>
+</div>
+
+<!-- STATS -->
+<div style="background: #111f3a; padding: 2rem; border-bottom: 0.5px solid #2a4a80;">
+  <div class="stats-grid" style="max-width: 700px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center;">
+    <div class="stat"><div class="stat-num">8+</div><div class="stat-label">Años de experiencia</div></div>
+    <div class="stat"><div class="stat-num"><i class="ti ti-world" style="font-size:26px;color:#b8c8e8;"></i></div><div class="stat-label">Cobertura internacional</div></div>
+    <div class="stat"><div class="stat-num">JMT</div><div class="stat-label">Coach John Maxwell</div></div>
+  </div>
+</div>
+
+<!-- ¿POR QUÉ ELEGIRME? -->
+<div class="section" style="background: #f7f9fc;">
+  <div class="container">
+    <span class="tag">Por qué elegirme</span>
+    <h2 style="font-size: 22px; font-weight: 500; color: #0d1f40; margin-bottom: 0.5rem;">Asesoría personalizada con respaldo internacional</h2>
+    <p style="font-size: 15px; color: #555; margin-bottom: 2rem; line-height: 1.7;">Mi compromiso es brindarte el mejor servicio, enfocado en proteger tu patrimonio, tu vida y el futuro de tu familia, con planes adaptados a tus necesidades y metas.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
+      <div class="card" style="display: flex; gap: 12px; align-items: flex-start;">
+        <i class="ti ti-shield-check" style="font-size: 22px; color: #1a3a6b; flex-shrink:0; margin-top:2px;"></i>
+        <div><p style="font-weight: 500; font-size: 14px; color: #0d1f40;">Respaldo internacional</p><p style="font-size: 13px; color: #666; margin-top:4px;">Una de las aseguradoras más sólidas del mercado.</p></div>
+      </div>
+      <div class="card" style="display: flex; gap: 12px; align-items: flex-start;">
+        <i class="ti ti-user-check" style="font-size: 22px; color: #1a3a6b; flex-shrink:0; margin-top:2px;"></i>
+        <div><p style="font-weight: 500; font-size: 14px; color: #0d1f40;">Atención 100% personalizada</p><p style="font-size: 13px; color: #666; margin-top:4px;">Analizo tu situación individual y familiar.</p></div>
+      </div>
+      <div class="card" style="display: flex; gap: 12px; align-items: flex-start;">
+        <i class="ti ti-certificate" style="font-size: 22px; color: #1a3a6b; flex-shrink:0; margin-top:2px;"></i>
+        <div><p style="font-weight: 500; font-size: 14px; color: #0d1f40;">Coach certificado John Maxwell</p><p style="font-size: 13px; color: #666; margin-top:4px;">Liderazgo y crecimiento personal en cada consulta.</p></div>
+      </div>
+      <div class="card" style="display: flex; gap: 12px; align-items: flex-start;">
+        <i class="ti ti-world" style="font-size: 22px; color: #1a3a6b; flex-shrink:0; margin-top:2px;"></i>
+        <div><p style="font-weight: 500; font-size: 14px; color: #0d1f40;">Cobertura internacional</p><p style="font-size: 13px; color: #666; margin-top:4px;">Planes que te protegen en Perú y el mundo.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- PRODUCTOS -->
+<div class="section" style="background: #fff;">
+  <div class="container">
+    <span class="tag">Nuestros productos</span>
+    <h2 style="font-size: 22px; font-weight: 500; color: #0d1f40; margin-bottom: 0.5rem;">Soluciones para cada etapa de tu vida</h2>
+    <p style="font-size: 15px; color: #555; margin-bottom: 2rem;">Elige el plan que mejor se adapta a tus metas y las de tu familia.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem;">
+
+      <div style="background: #f4f6fa; border: 0.5px solid #b0bcd4; border-top: 3px solid #1a3a6b; border-radius: 12px; padding: 1.5rem;">
+        <i class="ti ti-heart-handshake" style="font-size: 28px; color: #1a3a6b; margin-bottom: 12px; display: block;"></i>
+        <p style="font-weight: 500; font-size: 15px; color: #0d1f40; margin-bottom: 8px;">Seguro de Vida</p>
+        <p style="font-size: 13px; color: #666; line-height: 1.6; margin-bottom: 1rem;">Protege a tu familia y tu patrimonio ante cualquier eventualidad. Cobertura de primer nivel.</p>
+        <a href="https://wa.me/51960112040?text=Hola%20Esteban,%20me%20interesa%20el%20Seguro%20de%20Vida." class="wabtn" style="font-size: 13px; padding: 10px 16px; width: 100%; justify-content: center;" target="_blank"><i class="ti ti-brand-whatsapp"></i> Consultar</a>
+      </div>
+
+      <div style="background: #f4f6fa; border: 0.5px solid #b0bcd4; border-top: 3px solid #1a3a6b; border-radius: 12px; padding: 1.5rem;">
+        <i class="ti ti-chart-line" style="font-size: 28px; color: #1a3a6b; margin-bottom: 12px; display: block;"></i>
+        <p style="font-weight: 500; font-size: 15px; color: #0d1f40; margin-bottom: 8px;">Fondos Indexados</p>
+        <p style="font-size: 13px; color: #666; line-height: 1.6; margin-bottom: 1rem;">Capitaliza tus ahorros ligados a índices como S&P 500 y NASDAQ 100 con protección del capital.</p>
+        <a href="https://wa.me/51960112040?text=Hola%20Esteban,%20me%20interesa%20el%20plan%20de%20Fondos%20Indexados." class="wabtn" style="font-size: 13px; padding: 10px 16px; width: 100%; justify-content: center;" target="_blank"><i class="ti ti-brand-whatsapp"></i> Consultar</a>
+      </div>
+
+      <div style="background: #f4f6fa; border: 0.5px solid #b0bcd4; border-top: 3px solid #1a3a6b; border-radius: 12px; padding: 1.5rem;">
+        <i class="ti ti-beach" style="font-size: 28px; color: #1a3a6b; margin-bottom: 12px; display: block;"></i>
+        <p style="font-weight: 500; font-size: 15px; color: #0d1f40; margin-bottom: 8px;">Retiro Laboral Temprano</p>
+        <p style="font-size: 13px; color: #666; line-height: 1.6; margin-bottom: 1rem;">Planifica tu independencia financiera y retírate antes de los 60 con ingresos asegurados.</p>
+        <a href="https://wa.me/51960112040?text=Hola%20Esteban,%20me%20interesa%20el%20plan%20de%20Retiro%20Laboral%20Temprano." class="wabtn" style="font-size: 13px; padding: 10px 16px; width: 100%; justify-content: center;" target="_blank"><i class="ti ti-brand-whatsapp"></i> Consultar</a>
+      </div>
+
+      <div style="background: #f4f6fa; border: 0.5px solid #b0bcd4; border-top: 3px solid #1a3a6b; border-radius: 12px; padding: 1.5rem;">
+        <i class="ti ti-school" style="font-size: 28px; color: #1a3a6b; margin-bottom: 12px; display: block;"></i>
+        <p style="font-weight: 500; font-size: 15px; color: #0d1f40; margin-bottom: 8px;">Programa Universitario</p>
+        <p style="font-size: 13px; color: #666; line-height: 1.6; margin-bottom: 1rem;">Asegura la educación universitaria de tus hijos desde hoy. La mejor herencia que puedes darles.</p>
+        <a href="https://wa.me/51960112040?text=Hola%20Esteban,%20me%20interesa%20el%20Programa%20Universitario." class="wabtn" style="font-size: 13px; padding: 10px 16px; width: 100%; justify-content: center;" target="_blank"><i class="ti ti-brand-whatsapp"></i> Consultar</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- SIMULADOR -->
+<div class="section" style="background: #f7f9fc;">
+  <div class="container">
+    <span class="tag">Simulador de inversión</span>
+    <h2 style="font-size: 22px; font-weight: 500; color: #0d1f40; margin-bottom: 0.5rem;">¿Cuánto puede crecer tu dinero?</h2>
+    <p style="font-size: 15px; color: #555; margin-bottom: 2rem;">Ajusta los valores y mira el potencial de tu plan de Fondos Indexados.</p>
+    <div class="card" style="max-width: 560px;">
+      <div style="margin-bottom: 1.5rem;">
+        <label style="font-size: 14px; color: #555; display: block; margin-bottom: 6px;">Ahorro mensual: <strong id="monto-label" style="color: #0d1f40;">$200</strong></label>
+        <input type="range" min="100" max="1000" step="50" value="200" id="monto">
+      </div>
+      <div style="margin-bottom: 1.5rem;">
+        <label style="font-size: 14px; color: #555; display: block; margin-bottom: 6px;">Años de ahorro: <strong id="años-label" style="color: #0d1f40;">15 años</strong></label>
+        <input type="range" min="5" max="35" step="1" value="15" id="años">
+      </div>
+      <div style="background: #0d1f40; border-radius: 10px; padding: 1.25rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+        <div style="text-align: center;">
+          <p style="font-size: 12px; color: #8a9ec0; margin-bottom: 4px;">Total aportado</p>
+          <p id="aportado" style="font-size: 20px; font-weight: 500; color: #c0cfe8;">$36,000</p>
+        </div>
+        <div style="text-align: center;">
+          <p style="font-size: 12px; color: #8a9ec0; margin-bottom: 4px;">Valor estimado</p>
+          <p id="resultado" style="font-size: 20px; font-weight: 500; color: #7dd4a8;">$76,434</p>
+        </div>
+      </div>
+      <p style="font-size: 12px; color: #888; margin-top: 1rem; line-height: 1.5;">* Proyección referencial basada en rendimiento histórico del S&P 500. No garantiza rendimiento futuro.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ENCUESTA -->
+<div class="section" style="background: #fff;">
+  <div class="container">
+    <span class="tag">Formulario de contacto</span>
+    <h2 style="font-size: 22px; font-weight: 500; color: #0d1f40; margin-bottom: 0.5rem;">Cuéntame sobre ti</h2>
+    <p style="font-size: 15px; color: #555; margin-bottom: 2rem;">Completa el formulario y me pondré en contacto contigo a la brevedad.</p>
+    <div class="card" style="max-width: 560px;">
+
+      <div style="margin-bottom: 1.25rem;">
+        <label style="font-size: 13px; color: #555; display: block; margin-bottom: 6px;">Nombre completo *</label>
+        <input type="text" id="f-nombre" placeholder="Ej: Juan García">
+      </div>
+
+      <div class="grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem;">
+        <div>
+          <label style="font-size: 13px; color: #555; display: block; margin-bottom: 6px;">Edad *</label>
+          <input type="number" id="f-edad" placeholder="Ej: 35" min="18" max="80">
+        </div>
+        <div>
+          <label style="font-size: 13px; color: #555; display: block; margin-bottom: 6px;">País / Ciudad *</label>
+          <input type="text" id="f-ciudad" placeholder="Ej: Lima, Perú">
+        </div>
+      </div>
+
+      <div style="margin-bottom: 1.25rem;">
+        <label style="font-size: 13px; color: #555; display: block; margin-bottom: 6px;">Producto de interés *</label>
+        <select id="f-producto">
+          <option value="">Selecciona una opción</option>
+          <option>Seguro de Vida</option>
+          <option>Fondos Indexados</option>
+          <option>Retiro Laboral Temprano</option>
+          <option>Programa Universitario</option>
+          <option>Más de uno / No estoy seguro</option>
+        </select>
+      </div>
+
+      <div style="margin-bottom: 1.25rem;">
+        <label style="font-size: 13px; color: #555; display: block; margin-bottom: 6px;">¿Tienes algún seguro actualmente? *</label>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <label style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: #0d1f40; cursor: pointer;"><input type="radio" name="seguro" value="Sí"> Sí</label>
+          <label style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: #0d1f40; cursor: pointer;"><input type="radio" name="seguro" value="No"> No</label>
+          <label style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: #0d1f40; cursor: pointer;"><input type="radio" name="seguro" value="No estoy seguro"> No estoy seguro</label>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 1.5rem;">
+        <label style="font-size: 13px; color: #555; display: block; margin-bottom: 6px;">Presupuesto mensual aproximado (USD) *</label>
+        <select id="f-presupuesto">
+          <option value="">Selecciona una opción</option>
+          <option>Menos de $100</option>
+          <option>$100 – $200</option>
+          <option>$200 – $400</option>
+          <option>$400 – $700</option>
+          <option>Más de $700</option>
+        </select>
+      </div>
+
+      <div id="f-error" style="display:none; background: #fce8e8; color: #7a1f1f; border-radius: 8px; padding: 10px 14px; font-size: 13px; margin-bottom: 1rem;">Por favor completa todos los campos antes de enviar.</div>
+
+      <button onclick="enviarWA()" class="wabtn" style="width: 100%; justify-content: center; font-size: 15px; padding: 14px;">
+        <i class="ti ti-brand-whatsapp" style="font-size: 20px;"></i>
+        Enviar por WhatsApp
+      </button>
+      <p style="font-size: 12px; color: #888; margin-top: 10px; text-align: center;">Se abrirá WhatsApp con tu información lista para enviar.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- CTA FINAL -->
+<div style="background: #0d1f40; padding: 3.5rem 2rem; text-align: center; border-top: 3px solid #4a6fa5;">
+  <div style="max-width: 600px; margin: 0 auto;">
+    <span class="tag" style="background: #1a3a6b; color: #b8c8e8; margin-bottom: 1rem; display: inline-block;">¿Listo para empezar?</span>
+    <h2 style="font-size: 24px; font-weight: 500; color: #e8edf5; margin-bottom: 1rem; line-height: 1.4;">Agenda tu asesoría gratuita hoy</h2>
+    <p style="font-size: 15px; color: #8a9ec0; line-height: 1.7; margin-bottom: 2rem;">Conversemos sobre tus metas financieras y encuentra el plan ideal para ti y tu familia. Sin compromiso.</p>
+    <a href="https://wa.me/51960112040?text=Hola%20Esteban,%20me%20gustar%C3%ADa%20agendar%20una%20asesor%C3%ADa%20gratuita." class="wabtn wabtn-lg" target="_blank">
+      <i class="ti ti-brand-whatsapp" style="font-size: 22px;"></i>
+      Escribirme ahora
+    </a>
+    <p style="font-size: 13px; color: #5a7090; margin-top: 1.25rem;">+51 960 112 040 · Lima, Perú</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div style="background: #080f1e; padding: 1.5rem 2rem; text-align: center;">
+  <p style="font-size: 13px; color: #3d5070;">© 2026 Esteban Peralta · Agente de Seguros e Inversiones</p>
+</div>
+
+<script>
+  const monto = document.getElementById('monto');
+  const años = document.getElementById('años');
+  const montoLabel = document.getElementById('monto-label');
+  const añosLabel = document.getElementById('años-label');
+  const aportado = document.getElementById('aportado');
+  const resultado = document.getElementById('resultado');
+
+  function fmt(n) {
+    return '$' + Math.round(n).toLocaleString('en-US');
+  }
+
+  function calcular() {
+    const m = parseInt(monto.value);
+    const a = parseInt(años.value);
+    const total = m * 12 * a;
+    const tasa = 0.085;
+    let acum = 0;
+    for (let i = 0; i < a * 12; i++) {
+      acum = (acum + m) * (1 + tasa / 12);
+    }
+    montoLabel.textContent = fmt(m);
+    añosLabel.textContent = a + ' años';
+    aportado.textContent = fmt(total);
+    resultado.textContent = fmt(acum);
+  }
+
+  function enviarWA() {
+    const nombre = document.getElementById('f-nombre').value.trim();
+    const edad = document.getElementById('f-edad').value.trim();
+    const ciudad = document.getElementById('f-ciudad').value.trim();
+    const producto = document.getElementById('f-producto').value;
+    const presupuesto = document.getElementById('f-presupuesto').value;
+    const seguroEl = document.querySelector('input[name="seguro"]:checked');
+    const err = document.getElementById('f-error');
+
+    if (!nombre || !edad || !ciudad || !producto || !presupuesto || !seguroEl) {
+      err.style.display = 'block'; return;
+    }
+    err.style.display = 'none';
+
+    const msg = `Hola Esteban, completé el formulario de tu página:%0A%0A👤 *Nombre:* ${encodeURIComponent(nombre)}%0A🎂 *Edad:* ${encodeURIComponent(edad)}%0A📍 *Ciudad:* ${encodeURIComponent(ciudad)}%0A📋 *Producto de interés:* ${encodeURIComponent(producto)}%0A🛡️ *¿Tiene seguro actualmente?:* ${encodeURIComponent(seguroEl.value)}%0A💰 *Presupuesto mensual:* ${encodeURIComponent(presupuesto)}%0A%0AMe gustaría recibir más información.`;
+    window.open(`https://wa.me/51960112040?text=${msg}`, '_blank');
+  }
+
+  monto.addEventListener('input', calcular);
+  años.addEventListener('input', calcular);
+  calcular();
+</script>
+
+</body>
+</html>
