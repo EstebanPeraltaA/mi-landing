@@ -37,6 +37,8 @@
       .grid-2 { grid-template-columns: 1fr !important; }
       .wabtn-lg { width: 100%; justify-content: center; }
       .stats-grid { grid-template-columns: 1fr !important; gap: 0.75rem !important; }
+      .img-strip { grid-template-columns: 1fr !important; height: auto !important; }
+      .img-strip img { height: 120px; }
     }
   </style>
 </head>
@@ -58,6 +60,13 @@
   </div>
 </div>
 
+<!-- IMAGEN STRIP -->
+<div class="img-strip" style="display: grid; grid-template-columns: repeat(3, 1fr); height: 200px; overflow: hidden;">
+  <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80" alt="Inversiones" style="width:100%; height:100%; object-fit:cover; filter: brightness(0.7);">
+  <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&q=80" alt="Finanzas" style="width:100%; height:100%; object-fit:cover; filter: brightness(0.7);">
+  <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&q=80" alt="Familia protegida" style="width:100%; height:100%; object-fit:cover; filter: brightness(0.7);">
+</div>
+
 <!-- STATS -->
 <div style="background: #111f3a; padding: 2rem; border-bottom: 0.5px solid #2a4a80;">
   <div class="stats-grid" style="max-width: 700px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center;">
@@ -72,7 +81,12 @@
   <div class="container">
     <span class="tag">Por qué elegirme</span>
     <h2 style="font-size: 22px; font-weight: 500; color: #0d1f40; margin-bottom: 0.5rem;">Asesoría personalizada con respaldo internacional</h2>
-    <p style="font-size: 15px; color: #555; margin-bottom: 2rem; line-height: 1.7;">Mi compromiso es brindarte el mejor servicio, enfocado en proteger tu patrimonio, tu vida y el futuro de tu familia, con planes adaptados a tus necesidades y metas.</p>
+    <p style="font-size: 15px; color: #555; margin-bottom: 1.5rem; line-height: 1.7;">Mi compromiso es brindarte el mejor servicio, enfocado en proteger tu patrimonio, tu vida y el futuro de tu familia, con planes adaptados a tus necesidades y metas.</p>
+
+    <div style="border-radius: 12px; overflow: hidden; margin-bottom: 2rem; max-height: 220px;">
+      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=900&q=80" alt="Asesoría financiera personalizada" style="width:100%; object-fit:cover; object-position: center 40%; filter: brightness(0.85);">
+    </div>
+
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
       <div class="card" style="display: flex; gap: 12px; align-items: flex-start;">
         <i class="ti ti-shield-check" style="font-size: 22px; color: #1a3a6b; flex-shrink:0; margin-top:2px;"></i>
@@ -101,37 +115,37 @@
   <div class="container">
     <span class="tag">Nuestros productos</span>
     <h2 style="font-size: 22px; font-weight: 500; color: #0d1f40; margin-bottom: 0.5rem;">Soluciones para cada etapa de tu vida</h2>
-    <p style="font-size: 15px; color: #555; margin-bottom: 2rem;">Elige el plan que mejor se adapta a tus metas y las de tu familia.</p>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem;">
+    <p style="font-size: 15px; color: #555; margin-bottom: 1.5rem;">Elige el plan que mejor se adapta a tus metas y las de tu familia.</p>
 
+    <div style="border-radius: 12px; overflow: hidden; margin-bottom: 2rem; max-height: 200px;">
+      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=80" alt="Planes de inversión" style="width:100%; object-fit:cover; object-position: center 30%; filter: brightness(0.85);">
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem;">
       <div style="background: #f4f6fa; border: 0.5px solid #b0bcd4; border-top: 3px solid #1a3a6b; border-radius: 12px; padding: 1.5rem;">
         <i class="ti ti-heart-handshake" style="font-size: 28px; color: #1a3a6b; margin-bottom: 12px; display: block;"></i>
         <p style="font-weight: 500; font-size: 15px; color: #0d1f40; margin-bottom: 8px;">Seguro de Vida</p>
         <p style="font-size: 13px; color: #666; line-height: 1.6; margin-bottom: 1rem;">Protege a tu familia y tu patrimonio ante cualquier eventualidad. Cobertura de primer nivel.</p>
         <a href="https://wa.me/51960112040?text=Hola%20Esteban,%20me%20interesa%20el%20Seguro%20de%20Vida." class="wabtn" style="font-size: 13px; padding: 10px 16px; width: 100%; justify-content: center;" target="_blank"><i class="ti ti-brand-whatsapp"></i> Consultar</a>
       </div>
-
       <div style="background: #f4f6fa; border: 0.5px solid #b0bcd4; border-top: 3px solid #1a3a6b; border-radius: 12px; padding: 1.5rem;">
         <i class="ti ti-chart-line" style="font-size: 28px; color: #1a3a6b; margin-bottom: 12px; display: block;"></i>
         <p style="font-weight: 500; font-size: 15px; color: #0d1f40; margin-bottom: 8px;">Fondos Indexados</p>
         <p style="font-size: 13px; color: #666; line-height: 1.6; margin-bottom: 1rem;">Capitaliza tus ahorros ligados a índices como S&P 500 y NASDAQ 100 con protección del capital.</p>
         <a href="https://wa.me/51960112040?text=Hola%20Esteban,%20me%20interesa%20el%20plan%20de%20Fondos%20Indexados." class="wabtn" style="font-size: 13px; padding: 10px 16px; width: 100%; justify-content: center;" target="_blank"><i class="ti ti-brand-whatsapp"></i> Consultar</a>
       </div>
-
       <div style="background: #f4f6fa; border: 0.5px solid #b0bcd4; border-top: 3px solid #1a3a6b; border-radius: 12px; padding: 1.5rem;">
         <i class="ti ti-beach" style="font-size: 28px; color: #1a3a6b; margin-bottom: 12px; display: block;"></i>
         <p style="font-weight: 500; font-size: 15px; color: #0d1f40; margin-bottom: 8px;">Retiro Laboral Temprano</p>
         <p style="font-size: 13px; color: #666; line-height: 1.6; margin-bottom: 1rem;">Planifica tu independencia financiera y retírate antes de los 60 con ingresos asegurados.</p>
         <a href="https://wa.me/51960112040?text=Hola%20Esteban,%20me%20interesa%20el%20plan%20de%20Retiro%20Laboral%20Temprano." class="wabtn" style="font-size: 13px; padding: 10px 16px; width: 100%; justify-content: center;" target="_blank"><i class="ti ti-brand-whatsapp"></i> Consultar</a>
       </div>
-
       <div style="background: #f4f6fa; border: 0.5px solid #b0bcd4; border-top: 3px solid #1a3a6b; border-radius: 12px; padding: 1.5rem;">
         <i class="ti ti-school" style="font-size: 28px; color: #1a3a6b; margin-bottom: 12px; display: block;"></i>
         <p style="font-weight: 500; font-size: 15px; color: #0d1f40; margin-bottom: 8px;">Programa Universitario</p>
         <p style="font-size: 13px; color: #666; line-height: 1.6; margin-bottom: 1rem;">Asegura la educación universitaria de tus hijos desde hoy. La mejor herencia que puedes darles.</p>
         <a href="https://wa.me/51960112040?text=Hola%20Esteban,%20me%20interesa%20el%20Programa%20Universitario." class="wabtn" style="font-size: 13px; padding: 10px 16px; width: 100%; justify-content: center;" target="_blank"><i class="ti ti-brand-whatsapp"></i> Consultar</a>
       </div>
-
     </div>
   </div>
 </div>
@@ -177,12 +191,10 @@
     <h2 style="font-size: 22px; font-weight: 500; color: #0d1f40; margin-bottom: 0.5rem;">Cuéntame sobre ti</h2>
     <p style="font-size: 15px; color: #555; margin-bottom: 2rem;">Completa el formulario y me pondré en contacto contigo a la brevedad.</p>
     <div class="card" style="max-width: 560px;">
-
       <div style="margin-bottom: 1.25rem;">
         <label style="font-size: 13px; color: #555; display: block; margin-bottom: 6px;">Nombre completo *</label>
         <input type="text" id="f-nombre" placeholder="Ej: Juan García">
       </div>
-
       <div class="grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem;">
         <div>
           <label style="font-size: 13px; color: #555; display: block; margin-bottom: 6px;">Edad *</label>
@@ -193,7 +205,6 @@
           <input type="text" id="f-ciudad" placeholder="Ej: Lima, Perú">
         </div>
       </div>
-
       <div style="margin-bottom: 1.25rem;">
         <label style="font-size: 13px; color: #555; display: block; margin-bottom: 6px;">Producto de interés *</label>
         <select id="f-producto">
@@ -205,7 +216,6 @@
           <option>Más de uno / No estoy seguro</option>
         </select>
       </div>
-
       <div style="margin-bottom: 1.25rem;">
         <label style="font-size: 13px; color: #555; display: block; margin-bottom: 6px;">¿Tienes algún seguro actualmente? *</label>
         <div style="display: flex; gap: 16px; flex-wrap: wrap;">
@@ -214,7 +224,6 @@
           <label style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: #0d1f40; cursor: pointer;"><input type="radio" name="seguro" value="No estoy seguro"> No estoy seguro</label>
         </div>
       </div>
-
       <div style="margin-bottom: 1.5rem;">
         <label style="font-size: 13px; color: #555; display: block; margin-bottom: 6px;">Presupuesto mensual aproximado (USD) *</label>
         <select id="f-presupuesto">
@@ -226,9 +235,7 @@
           <option>Más de $700</option>
         </select>
       </div>
-
       <div id="f-error" style="display:none; background: #fce8e8; color: #7a1f1f; border-radius: 8px; padding: 10px 14px; font-size: 13px; margin-bottom: 1rem;">Por favor completa todos los campos antes de enviar.</div>
-
       <button onclick="enviarWA()" class="wabtn" style="width: 100%; justify-content: center; font-size: 15px; padding: 14px;">
         <i class="ti ti-brand-whatsapp" style="font-size: 20px;"></i>
         Enviar por WhatsApp
