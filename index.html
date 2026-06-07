@@ -3,232 +3,236 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Esteban Peralta | Agente de Seguros e Inversiones</title>
+  <title>Esteban Peralta | Seguros e Inversiones</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a2e; background: #fff; }
     a { text-decoration: none; }
-    .wabtn {
-      display: inline-flex; align-items: center; gap: 10px;
-      background: #1a3a6b; color: #e8eaf0;
-      border: none; border-radius: 8px;
-      padding: 14px 28px; font-size: 15px; font-weight: 500;
-      cursor: pointer; transition: background 0.2s;
-    }
-    .wabtn:hover { background: #0f2550; }
-    .wabtn-lg { padding: 18px 36px; font-size: 17px; border-radius: 10px; }
-    .section { padding: 3rem 2rem; }
-    .container { max-width: 860px; margin: 0 auto; }
-    .tag { display: inline-block; background: #c0c8d8; color: #0d1f40; font-size: 12px; font-weight: 500; border-radius: 20px; padding: 4px 14px; margin-bottom: 12px; letter-spacing: 0.04em; text-transform: uppercase; }
-    .divider { border: none; border-top: 0.5px solid #c0c8d8; margin: 0; }
-    .card { background: #f4f6fa; border: 0.5px solid #b0bcd4; border-radius: 12px; padding: 1.5rem; }
-    .stat { text-align: center; }
-    .stat-num { font-size: 28px; font-weight: 500; color: #b8c8e8; }
-    .stat-label { font-size: 13px; color: #8a9ec0; margin-top: 4px; }
-    input[type=range] { width: 100%; accent-color: #1a3a6b; }
-    input[type=text], input[type=number], select {
-      width: 100%; padding: 10px 12px; border: 0.5px solid #b0bcd4;
-      border-radius: 8px; font-size: 14px; background: #fff; color: #0d1f40;
-      outline: none; font-family: inherit;
-    }
-    input:focus, select:focus { border-color: #1a3a6b; }
 
-    /* Animaciones hero */
-    @keyframes fadeUp { from { opacity:0; transform: translateY(18px); } to { opacity:1; transform: translateY(0); } }
-    @keyframes drawLine { from { stroke-dashoffset: 300; } to { stroke-dashoffset: 0; } }
-    @keyframes growBar { from { transform: scaleY(0); } to { transform: scaleY(1); } }
-    @keyframes popIn { from { opacity:0; transform: scale(0.6); } to { opacity:1; transform: scale(1); } }
-    .h1 { animation: fadeUp 0.7s ease both; }
-    .h2 { animation: fadeUp 0.7s 0.2s ease both; }
-    .h3 { animation: fadeUp 0.7s 0.35s ease both; }
-    .h4 { animation: fadeUp 0.7s 0.5s ease both; }
-    .h5 { animation: fadeUp 0.7s 0.65s ease both; }
-    .h6 { animation: fadeUp 0.7s 0.8s ease both; }
-    .chart-line { stroke-dasharray: 300; animation: drawLine 1.8s cubic-bezier(.4,0,.2,1) 0.5s both; }
-    .bar { transform-origin: bottom; animation: growBar 1s cubic-bezier(.22,1,.36,1) both; }
-    .b1 { animation-delay: .5s; } .b2 { animation-delay: .65s; } .b3 { animation-delay: .8s; } .b4 { animation-delay: .95s; }
-    .arrow-head { animation: popIn 0.4s cubic-bezier(.22,1,.36,1) 1.8s both; }
+    /* Animaciones */
+    @keyframes fadeUp { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes drawLine { from { stroke-dashoffset:300; } to { stroke-dashoffset:0; } }
+    @keyframes growBar { from { transform:scaleY(0); } to { transform:scaleY(1); } }
+    @keyframes popIn { from { opacity:0; transform:scale(0.5); } to { opacity:1; transform:scale(1); } }
+    @keyframes floatY { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
+    @keyframes glowPulse { 0%,100%{box-shadow:0 0 0 0 rgba(100,180,255,0);} 50%{box-shadow:0 0 24px 4px rgba(100,180,255,0.18);} }
+    @keyframes ringPulse { 0%,100%{transform:scale(1);opacity:0.3;} 50%{transform:scale(1.2);opacity:0.08;} }
 
-    @media (max-width: 600px) {
-      .grid-2 { grid-template-columns: 1fr !important; }
-      .wabtn-lg { width: 100%; justify-content: center; }
-      .stats-grid { grid-template-columns: 1fr !important; gap: 0.75rem !important; }
-      .img-strip { grid-template-columns: 1fr !important; height: auto !important; }
-      .img-strip img { height: 120px; }
-      .hero-chips { gap: 8px !important; }
+    .fu1{animation:fadeUp .8s ease both;}
+    .fu2{animation:fadeUp .8s .15s ease both;}
+    .fu3{animation:fadeUp .8s .3s ease both;}
+    .fu4{animation:fadeUp .8s .45s ease both;}
+    .fu5{animation:fadeUp .8s .6s ease both;}
+    .fu6{animation:fadeUp .8s .75s ease both;}
+    .fu7{animation:fadeUp .8s .9s ease both;}
+    .chart-line{stroke-dasharray:300;animation:drawLine 2s cubic-bezier(.4,0,.2,1) .6s both;}
+    .bar{transform-origin:bottom;animation:growBar 1s cubic-bezier(.22,1,.36,1) both;}
+    .b1{animation-delay:.5s;}.b2{animation-delay:.65s;}.b3{animation-delay:.8s;}.b4{animation-delay:.95s;}
+    .arrow-head{animation:popIn .4s cubic-bezier(.22,1,.36,1) 2s both;}
+    .float{animation:floatY 5s ease-in-out infinite;}
+    .glow{animation:glowPulse 3s ease-in-out infinite;}
+
+    /* Botones */
+    .btn {
+      display:inline-flex;align-items:center;gap:10px;
+      background:linear-gradient(135deg,#1a3a6b,#2358a8);
+      color:#e8f0ff;border:none;border-radius:10px;
+      padding:15px 30px;font-size:15px;font-weight:600;
+      cursor:pointer;transition:all .25s;text-decoration:none;letter-spacing:.3px;
+    }
+    .btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(26,58,107,.4);}
+    .btn-lg{padding:18px 38px;font-size:17px;border-radius:12px;}
+
+    /* Layout */
+    .section{padding:3.5rem 2rem;}
+    .container{max-width:880px;margin:0 auto;}
+    .tag{display:inline-block;background:#e0eaff;color:#1a3a6b;font-size:11px;font-weight:700;border-radius:20px;padding:5px 16px;margin-bottom:14px;letter-spacing:.07em;text-transform:uppercase;}
+    .divider{border:none;border-top:1px solid #eef1f8;margin:0;}
+
+    /* Cards */
+    .card{background:#fff;border:1.5px solid #e4eaf5;border-radius:16px;padding:1.6rem;transition:all .3s;}
+    .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(26,58,107,.1);border-color:#b8cce8;}
+    .product-card{background:#fff;border:1.5px solid #e4eaf5;border-radius:16px;padding:1.75rem;transition:all .3s;position:relative;overflow:hidden;}
+    .product-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#1a3a6b,#4a8fd4);}
+    .product-card:hover{transform:translateY(-5px);box-shadow:0 20px 50px rgba(26,58,107,.13);border-color:#b8cce8;}
+    .icon-box{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
+
+    /* Highlight text */
+    .hl{background:linear-gradient(135deg,#64b4ff,#a8d8ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+
+    /* Inputs */
+    input[type=text],input[type=number],select{width:100%;padding:12px 14px;border:1.5px solid #dde6f5;border-radius:10px;font-size:14px;background:#fff;color:#0d1f40;outline:none;font-family:inherit;transition:border .2s;}
+    input:focus,select:focus{border-color:#1a3a6b;}
+    input[type=range]{width:100%;accent-color:#1a3a6b;}
+
+    /* Badge vivo */
+    .live-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(125,212,168,.12);border:1px solid rgba(125,212,168,.28);color:#7dd4a8;font-size:12px;font-weight:500;border-radius:20px;padding:6px 16px;}
+    .green-dot{width:8px;height:8px;border-radius:50%;background:#7dd4a8;display:inline-block;animation:glowPulse 2s ease-in-out infinite;}
+
+    @media(max-width:600px){
+      .grid2{grid-template-columns:1fr!important;}
+      .btn-lg{width:100%;justify-content:center;}
+      .stats-row{grid-template-columns:1fr!important;}
+      .img-strip{grid-template-columns:1fr!important;height:auto!important;}
+      .img-strip div{height:110px!important;}
     }
   </style>
 </head>
 <body>
 
-<!-- HERO -->
-<div style="background: linear-gradient(160deg, #06112b 0%, #0d1f40 60%, #122a55 100%); padding: 3.5rem 2rem 4rem; text-align: center; min-height: 440px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+<!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+<div style="background:linear-gradient(145deg,#030c1c 0%,#091830 50%,#0e2848 100%);padding:4rem 2rem 4.5rem;text-align:center;position:relative;overflow:hidden;">
 
-  <!-- Círculos decorativos fondo -->
-  <div style="position:absolute;top:-60px;left:-60px;width:280px;height:280px;border-radius:50%;border:0.5px solid rgba(74,111,165,0.18);pointer-events:none;"></div>
-  <div style="position:absolute;bottom:-80px;right:-80px;width:320px;height:320px;border-radius:50%;border:0.5px solid rgba(74,111,165,0.15);pointer-events:none;"></div>
-  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:500px;border-radius:50%;border:0.5px solid rgba(74,111,165,0.06);pointer-events:none;"></div>
-
-  <!-- LOGO -->
-  <div class="h1" style="margin-bottom:1.2rem;">
-    <svg width="260" height="145" viewBox="0 0 260 145" role="img" xmlns="http://www.w3.org/2000/svg">
-      <title>Logo Esteban Peralta</title>
-      <defs>
-        <linearGradient id="shieldFill" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" style="stop-color:#1a3a6b"/>
-          <stop offset="100%" style="stop-color:#07111f"/>
-        </linearGradient>
-        <linearGradient id="silverLine" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#d0dff0"/>
-          <stop offset="100%" style="stop-color:#7a9ec8"/>
-        </linearGradient>
-        <linearGradient id="barUp" x1="0%" y1="100%" x2="0%" y2="0%">
-          <stop offset="0%" style="stop-color:#1a3a6b"/>
-          <stop offset="100%" style="stop-color:#7ab0e0"/>
-        </linearGradient>
-        <linearGradient id="greenLine" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" style="stop-color:#5ba88a"/>
-          <stop offset="100%" style="stop-color:#7dd4a8"/>
-        </linearGradient>
-        <linearGradient id="divLine" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" style="stop-color:#4a6fa5;stop-opacity:0"/>
-          <stop offset="50%" style="stop-color:#8aaad4"/>
-          <stop offset="100%" style="stop-color:#4a6fa5;stop-opacity:0"/>
-        </linearGradient>
-        <clipPath id="shieldClip">
-          <path d="M130 10 L178 30 L178 95 Q178 122 130 136 Q82 122 82 95 L82 30 Z"/>
-        </clipPath>
-      </defs>
-      <path d="M130 10 L178 30 L178 95 Q178 122 130 136 Q82 122 82 95 L82 30 Z" fill="url(#shieldFill)" stroke="url(#silverLine)" stroke-width="1.4"/>
-      <path d="M130 20 L168 37 L168 94 Q168 116 130 128 Q92 116 92 94 L92 37 Z" fill="none" stroke="rgba(138,170,212,0.15)" stroke-width="0.8"/>
-      <polygon points="92,104 104,96 114,88 122,78 132,62 144,46 155,38 155,104" fill="rgba(91,168,138,0.1)" clip-path="url(#shieldClip)"/>
-      <rect class="bar b1" x="95" y="90" width="9" height="14" rx="1" fill="url(#barUp)" opacity="0.45" clip-path="url(#shieldClip)"/>
-      <rect class="bar b2" x="108" y="80" width="9" height="24" rx="1" fill="url(#barUp)" opacity="0.45" clip-path="url(#shieldClip)"/>
-      <rect class="bar b3" x="121" y="66" width="9" height="38" rx="1" fill="url(#barUp)" opacity="0.45" clip-path="url(#shieldClip)"/>
-      <rect class="bar b4" x="134" y="50" width="9" height="54" rx="1" fill="url(#barUp)" opacity="0.55" clip-path="url(#shieldClip)"/>
-      <line x1="92" y1="104" x2="158" y2="104" stroke="rgba(138,170,212,0.3)" stroke-width="0.8"/>
-      <polyline class="chart-line" points="92,104 104,96 114,88 122,78 132,62 144,46 155,33" fill="none" stroke="url(#greenLine)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-      <g class="arrow-head">
-        <polyline points="148,30 155,33 152,40" fill="none" stroke="#7dd4a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="155" cy="33" r="3" fill="#7dd4a8" opacity="0.9"/>
-        <circle cx="155" cy="33" r="5.5" fill="none" stroke="#7dd4a8" stroke-width="0.8" opacity="0.4"/>
-      </g>
-      <line x1="40" y1="144" x2="220" y2="144" stroke="url(#divLine)" stroke-width="0.8"/>
-    </svg>
+  <!-- Anillos decorativos -->
+  <div style="position:absolute;inset:0;pointer-events:none;">
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;border-radius:50%;border:1px solid rgba(100,180,255,.05);animation:ringPulse 8s ease-in-out infinite;"></div>
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:500px;border-radius:50%;border:1px solid rgba(100,180,255,.07);animation:ringPulse 6s 1s ease-in-out infinite;"></div>
+    <div style="position:absolute;top:-80px;right:-80px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(42,88,168,.18) 0%,transparent 70%);"></div>
+    <div style="position:absolute;bottom:-60px;left:-60px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(26,58,107,.15) 0%,transparent 70%);"></div>
   </div>
 
-  <!-- Nombre firma -->
-  <div class="h2" style="margin-bottom:0.3rem;">
-    <span style="font-family:Georgia,'Times New Roman',serif;font-size:30px;font-weight:400;color:#e8edf5;letter-spacing:5px;font-style:italic;">Esteban Peralta</span>
-  </div>
+  <div style="max-width:660px;margin:0 auto;position:relative;">
 
-  <!-- Separador -->
-  <div class="h3" style="display:flex;align-items:center;gap:12px;justify-content:center;margin:0.8rem 0 1.4rem;">
-    <div style="height:0.5px;width:50px;background:linear-gradient(to right,transparent,#8aaad4);"></div>
-    <span style="font-size:11px;color:#8aaad4;letter-spacing:4px;text-transform:uppercase;">Seguros &amp; Inversiones</span>
-    <div style="height:0.5px;width:50px;background:linear-gradient(to left,transparent,#8aaad4);"></div>
-  </div>
+    <!-- Badge -->
+    <div class="fu1" style="margin-bottom:1.6rem;">
+      <span class="live-badge"><span class="green-dot"></span> Asesorías disponibles · Lima, Perú</span>
+    </div>
 
-  <!-- Chips -->
-  <div class="h4 hero-chips" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:1.6rem;">
-    <span style="background:rgba(26,58,107,0.6);border:0.5px solid rgba(138,170,212,0.3);color:#b8c8e8;font-size:12px;padding:5px 14px;border-radius:20px;letter-spacing:1px;">8+ años de experiencia</span>
-    <span style="background:rgba(26,58,107,0.6);border:0.5px solid rgba(138,170,212,0.3);color:#b8c8e8;font-size:12px;padding:5px 14px;border-radius:20px;letter-spacing:1px;">Coach John Maxwell</span>
-    <span style="background:rgba(26,58,107,0.6);border:0.5px solid rgba(138,170,212,0.3);color:#b8c8e8;font-size:12px;padding:5px 14px;border-radius:20px;letter-spacing:1px;">Cobertura internacional</span>
-  </div>
+    <!-- Logo flotante -->
+    <div class="fu2 float" style="margin-bottom:1.4rem;">
+      <svg width="230" height="132" viewBox="0 0 260 145" xmlns="http://www.w3.org/2000/svg" role="img">
+        <title>Logo Esteban Peralta - Crecimiento financiero</title>
+        <defs>
+          <linearGradient id="sf" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#1e4a8a"/><stop offset="100%" style="stop-color:#07111f"/></linearGradient>
+          <linearGradient id="sl" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#d0dff0"/><stop offset="100%" style="stop-color:#7a9ec8"/></linearGradient>
+          <linearGradient id="bu" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" style="stop-color:#1a3a6b"/><stop offset="100%" style="stop-color:#64b4ff"/></linearGradient>
+          <linearGradient id="gl" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#5ba88a"/><stop offset="100%" style="stop-color:#7dd4a8"/></linearGradient>
+          <linearGradient id="dl" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4a6fa5;stop-opacity:0"/><stop offset="50%" style="stop-color:#8aaad4"/><stop offset="100%" style="stop-color:#4a6fa5;stop-opacity:0"/></linearGradient>
+          <clipPath id="sc"><path d="M130 10 L178 30 L178 95 Q178 122 130 136 Q82 122 82 95 L82 30 Z"/></clipPath>
+          <filter id="glow"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        </defs>
+        <path d="M130 10 L178 30 L178 95 Q178 122 130 136 Q82 122 82 95 L82 30 Z" fill="url(#sf)" stroke="url(#sl)" stroke-width="1.4"/>
+        <path d="M130 20 L168 37 L168 94 Q168 116 130 128 Q92 116 92 94 L92 37 Z" fill="none" stroke="rgba(138,170,212,.15)" stroke-width=".8"/>
+        <polygon points="92,104 104,96 114,88 122,78 132,62 144,46 155,38 155,104" fill="rgba(91,168,138,.12)" clip-path="url(#sc)"/>
+        <rect class="bar b1" x="95" y="90" width="9" height="14" rx="1" fill="url(#bu)" opacity=".5" clip-path="url(#sc)"/>
+        <rect class="bar b2" x="108" y="80" width="9" height="24" rx="1" fill="url(#bu)" opacity=".6" clip-path="url(#sc)"/>
+        <rect class="bar b3" x="121" y="66" width="9" height="38" rx="1" fill="url(#bu)" opacity=".7" clip-path="url(#sc)"/>
+        <rect class="bar b4" x="134" y="50" width="9" height="54" rx="1" fill="url(#bu)" opacity=".8" clip-path="url(#sc)"/>
+        <line x1="92" y1="104" x2="158" y2="104" stroke="rgba(138,170,212,.3)" stroke-width=".8"/>
+        <polyline class="chart-line" points="92,104 104,96 114,88 122,78 132,62 144,46 155,33" fill="none" stroke="url(#gl)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+        <g class="arrow-head">
+          <polyline points="148,30 155,33 152,40" fill="none" stroke="#7dd4a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="155" cy="33" r="3.5" fill="#7dd4a8"/>
+          <circle cx="155" cy="33" r="7" fill="none" stroke="#7dd4a8" stroke-width=".8" opacity=".4"/>
+        </g>
+        <line x1="40" y1="144" x2="220" y2="144" stroke="url(#dl)" stroke-width=".8"/>
+      </svg>
+    </div>
 
-  <!-- Frase -->
-  <p class="h5" style="font-size:16px;color:#8a9ec0;max-width:480px;line-height:1.7;margin-bottom:2rem;">Protege tu vida, asegura tu futuro y haz crecer tu patrimonio con los mejores planes del mercado internacional.</p>
+    <!-- Nombre -->
+    <div class="fu3" style="margin-bottom:.4rem;">
+      <span style="font-family:Georgia,'Times New Roman',serif;font-size:32px;font-weight:400;color:#f0f4ff;letter-spacing:5px;font-style:italic;">Esteban Peralta</span>
+    </div>
 
-  <!-- Botón -->
-  <a class="h6 wabtn wabtn-lg" href="#formulario" style="scroll-behavior:smooth;">
-    <i class="ti ti-clipboard-list" style="font-size:22px;" aria-hidden="true"></i>
-    Quiero más información
-  </a>
-  <p style="font-size:13px;color:#3d5878;margin-top:1rem;">Completa el formulario y te contactamos a la brevedad</p>
-</div>
+    <!-- Separador -->
+    <div class="fu4" style="display:flex;align-items:center;gap:12px;justify-content:center;margin:.9rem 0 1.2rem;">
+      <div style="height:.5px;width:50px;background:linear-gradient(to right,transparent,#64b4ff);"></div>
+      <span style="font-size:11px;color:#64b4ff;letter-spacing:4px;text-transform:uppercase;font-weight:500;">Seguros &amp; Inversiones</span>
+      <div style="height:.5px;width:50px;background:linear-gradient(to left,transparent,#64b4ff);"></div>
+    </div>
 
-<!-- IMAGEN STRIP -->
-<div class="img-strip" style="display:grid;grid-template-columns:repeat(3,1fr);height:200px;overflow:hidden;">
-  <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80" alt="Inversiones" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7);">
-  <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&q=80" alt="Finanzas" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7);">
-  <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&q=80" alt="Familia protegida" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7);">
-</div>
+    <!-- Titular impacto -->
+    <div class="fu5" style="margin-bottom:1.6rem;">
+      <h1 style="font-size:22px;font-weight:700;color:#e8f0ff;line-height:1.55;margin-bottom:.6rem;">
+        Tu dinero puede trabajar para ti.<br><span class="hl">¿Ya lo estás aprovechando?</span>
+      </h1>
+      <p style="font-size:15px;color:#7a9ec0;line-height:1.75;">Más de 8 años ayudando a familias a construir un futuro financiero sólido, libre y protegido.</p>
+    </div>
 
-<!-- STATS -->
-<div style="background:#111f3a;padding:2rem;border-bottom:0.5px solid #2a4a80;">
-  <div class="stats-grid" style="max-width:700px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;text-align:center;">
-    <div class="stat"><div class="stat-num">8+</div><div class="stat-label">Años de experiencia</div></div>
-    <div class="stat"><div class="stat-num"><i class="ti ti-world" style="font-size:26px;color:#b8c8e8;"></i></div><div class="stat-label">Cobertura internacional</div></div>
-    <div class="stat"><div class="stat-num">JMT</div><div class="stat-label">Coach John Maxwell</div></div>
+    <!-- Chips -->
+    <div class="fu6" style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:2rem;">
+      <span style="background:rgba(26,58,107,.5);border:1px solid rgba(100,180,255,.2);color:#a8c8f0;font-size:12px;padding:6px 14px;border-radius:20px;">✓ 8+ años de experiencia</span>
+      <span style="background:rgba(26,58,107,.5);border:1px solid rgba(100,180,255,.2);color:#a8c8f0;font-size:12px;padding:6px 14px;border-radius:20px;">✓ Coach John Maxwell</span>
+      <span style="background:rgba(26,58,107,.5);border:1px solid rgba(100,180,255,.2);color:#a8c8f0;font-size:12px;padding:6px 14px;border-radius:20px;">✓ Cobertura internacional</span>
+    </div>
+
+    <!-- CTA -->
+    <div class="fu7">
+      <a href="#formulario" class="btn btn-lg glow" onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'});return false;">
+        <i class="ti ti-clipboard-list" style="font-size:22px;"></i>
+        Quiero proteger mi futuro
+      </a>
+      <p style="font-size:13px;color:#3d6080;margin-top:1rem;">Sin compromiso · Respuesta en menos de 24 horas</p>
+    </div>
   </div>
 </div>
 
-<!-- ¿POR QUÉ ELEGIRME? -->
-<div class="section" style="background:#f7f9fc;">
+<!-- ═══════════════════════════════ STATS ═══════════════════════════════ -->
+<div style="background:#071528;padding:2rem;border-bottom:1px solid rgba(100,180,255,.08);">
+  <div class="stats-row" style="max-width:800px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
+    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:1.25rem;text-align:center;transition:all .25s;" onmouseover="this.style.background='rgba(255,255,255,.08)'" onmouseout="this.style.background='rgba(255,255,255,.04)'">
+      <p style="font-size:30px;font-weight:700;color:#64b4ff;margin-bottom:4px;">8+</p>
+      <p style="font-size:13px;color:#6a8caa;">Años de experiencia</p>
+    </div>
+    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:1.25rem;text-align:center;transition:all .25s;" onmouseover="this.style.background='rgba(255,255,255,.08)'" onmouseout="this.style.background='rgba(255,255,255,.04)'">
+      <p style="font-size:30px;font-weight:700;color:#7dd4a8;margin-bottom:4px;">100%</p>
+      <p style="font-size:13px;color:#6a8caa;">Atención personalizada</p>
+    </div>
+    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:1.25rem;text-align:center;transition:all .25s;" onmouseover="this.style.background='rgba(255,255,255,.08)'" onmouseout="this.style.background='rgba(255,255,255,.04)'">
+      <p style="font-size:28px;font-weight:700;color:#a8c8f0;margin-bottom:4px;">🌎</p>
+      <p style="font-size:13px;color:#6a8caa;">Cobertura internacional</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ IMAGEN STRIP ═══════════════════════════════ -->
+<div class="img-strip" style="display:grid;grid-template-columns:repeat(3,1fr);height:190px;overflow:hidden;">
+  <div style="position:relative;overflow:hidden;height:190px;">
+    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80" alt="Inversiones" style="width:100%;height:100%;object-fit:cover;filter:brightness(.5);transition:transform .4s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">
+      <span style="color:#fff;font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;">Inversiones</span>
+    </div>
+  </div>
+  <div style="position:relative;overflow:hidden;height:190px;">
+    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&q=80" alt="Protección" style="width:100%;height:100%;object-fit:cover;filter:brightness(.5);transition:transform .4s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">
+      <span style="color:#fff;font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;">Protección</span>
+    </div>
+  </div>
+  <div style="position:relative;overflow:hidden;height:190px;">
+    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&q=80" alt="Familia" style="width:100%;height:100%;object-fit:cover;filter:brightness(.5);transition:transform .4s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">
+      <span style="color:#fff;font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;">Familia</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ POR QUÉ ELEGIRME ═══════════════════════════════ -->
+<div class="section" style="background:#f8faff;">
   <div class="container">
     <span class="tag">Por qué elegirme</span>
-    <h2 style="font-size:22px;font-weight:500;color:#0d1f40;margin-bottom:0.5rem;">Asesoría personalizada con respaldo internacional</h2>
-    <p style="font-size:15px;color:#555;margin-bottom:1.5rem;line-height:1.7;">Mi compromiso es brindarte el mejor servicio, enfocado en proteger tu patrimonio, tu vida y el futuro de tu familia, con planes adaptados a tus necesidades y metas.</p>
-    <div style="border-radius:12px;overflow:hidden;margin-bottom:2rem;max-height:220px;">
-      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=900&q=80" alt="Asesoría financiera personalizada" style="width:100%;object-fit:cover;object-position:center 40%;filter:brightness(0.85);">
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;">
-      <div class="card" style="display:flex;gap:12px;align-items:flex-start;">
-        <i class="ti ti-shield-check" style="font-size:22px;color:#1a3a6b;flex-shrink:0;margin-top:2px;"></i>
-        <div><p style="font-weight:500;font-size:14px;color:#0d1f40;">Respaldo internacional</p><p style="font-size:13px;color:#666;margin-top:4px;">Una de las aseguradoras más sólidas del mercado.</p></div>
-      </div>
-      <div class="card" style="display:flex;gap:12px;align-items:flex-start;">
-        <i class="ti ti-user-check" style="font-size:22px;color:#1a3a6b;flex-shrink:0;margin-top:2px;"></i>
-        <div><p style="font-weight:500;font-size:14px;color:#0d1f40;">Atención 100% personalizada</p><p style="font-size:13px;color:#666;margin-top:4px;">Analizo tu situación individual y familiar.</p></div>
-      </div>
-      <div class="card" style="display:flex;gap:12px;align-items:flex-start;">
-        <i class="ti ti-certificate" style="font-size:22px;color:#1a3a6b;flex-shrink:0;margin-top:2px;"></i>
-        <div><p style="font-weight:500;font-size:14px;color:#0d1f40;">Coach certificado John Maxwell</p><p style="font-size:13px;color:#666;margin-top:4px;">Liderazgo y crecimiento personal en cada consulta.</p></div>
-      </div>
-      <div class="card" style="display:flex;gap:12px;align-items:flex-start;">
-        <i class="ti ti-world" style="font-size:22px;color:#1a3a6b;flex-shrink:0;margin-top:2px;"></i>
-        <div><p style="font-weight:500;font-size:14px;color:#0d1f40;">Cobertura internacional</p><p style="font-size:13px;color:#666;margin-top:4px;">Planes que te protegen en Perú y el mundo.</p></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<hr class="divider">
-
-<!-- PRODUCTOS -->
-<div class="section" style="background:#fff;">
-  <div class="container">
-    <span class="tag">Nuestros productos</span>
-    <h2 style="font-size:22px;font-weight:500;color:#0d1f40;margin-bottom:0.5rem;">Soluciones para cada etapa de tu vida</h2>
-    <p style="font-size:15px;color:#555;margin-bottom:1.5rem;">Elige el plan que mejor se adapta a tus metas y las de tu familia.</p>
-    <div style="border-radius:12px;overflow:hidden;margin-bottom:2rem;max-height:200px;">
-      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=80" alt="Planes de inversión" style="width:100%;object-fit:cover;object-position:center 30%;filter:brightness(0.85);">
+    <h2 style="font-size:24px;font-weight:700;color:#0d1f40;margin-bottom:.6rem;line-height:1.4;">No solo vendo seguros.<br><span style="color:#1a3a6b;">Construyo tu tranquilidad.</span></h2>
+    <p style="font-size:15px;color:#556;margin-bottom:1.75rem;line-height:1.75;max-width:580px;">Entiendo que cada familia es diferente. Por eso diseño un plan a tu medida, con respaldo internacional y la cercanía que mereces.</p>
+    <div style="border-radius:16px;overflow:hidden;margin-bottom:2rem;max-height:220px;">
+      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=900&q=80" alt="Asesoría financiera" style="width:100%;object-fit:cover;object-position:center 40%;filter:brightness(.88);">
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem;">
-      <div style="background:#f4f6fa;border:0.5px solid #b0bcd4;border-top:3px solid #1a3a6b;border-radius:12px;padding:1.5rem;">
-        <i class="ti ti-heart-handshake" style="font-size:28px;color:#1a3a6b;margin-bottom:12px;display:block;"></i>
-        <p style="font-weight:500;font-size:15px;color:#0d1f40;margin-bottom:8px;">Seguro de Vida</p>
-        <p style="font-size:13px;color:#666;line-height:1.6;margin-bottom:1rem;">Protege a tu familia y tu patrimonio ante cualquier eventualidad. Cobertura de primer nivel.</p>
-        <a href="#formulario" class="wabtn" style="font-size:13px;padding:10px 16px;width:100%;justify-content:center;"><i class="ti ti-clipboard-list"></i> Me interesa</a>
+      <div class="card" style="display:flex;gap:14px;align-items:flex-start;">
+        <div class="icon-box" style="background:#e8f0ff;margin-bottom:0;flex-shrink:0;"><i class="ti ti-shield-check" style="font-size:22px;color:#1a3a6b;"></i></div>
+        <div><p style="font-weight:700;font-size:14px;color:#0d1f40;">Respaldo internacional</p><p style="font-size:13px;color:#778;margin-top:4px;line-height:1.5;">Aseguradora sólida con presencia global.</p></div>
       </div>
-      <div style="background:#f4f6fa;border:0.5px solid #b0bcd4;border-top:3px solid #1a3a6b;border-radius:12px;padding:1.5rem;">
-        <i class="ti ti-chart-line" style="font-size:28px;color:#1a3a6b;margin-bottom:12px;display:block;"></i>
-        <p style="font-weight:500;font-size:15px;color:#0d1f40;margin-bottom:8px;">Fondos Indexados</p>
-        <p style="font-size:13px;color:#666;line-height:1.6;margin-bottom:1rem;">Capitaliza tus ahorros ligados a índices como S&P 500 y NASDAQ 100 con protección del capital.</p>
-        <a href="#formulario" class="wabtn" style="font-size:13px;padding:10px 16px;width:100%;justify-content:center;"><i class="ti ti-clipboard-list"></i> Me interesa</a>
+      <div class="card" style="display:flex;gap:14px;align-items:flex-start;">
+        <div class="icon-box" style="background:#e8f0ff;margin-bottom:0;flex-shrink:0;"><i class="ti ti-user-heart" style="font-size:22px;color:#1a3a6b;"></i></div>
+        <div><p style="font-weight:700;font-size:14px;color:#0d1f40;">Atención personalizada</p><p style="font-size:13px;color:#778;margin-top:4px;line-height:1.5;">Analizo tu situación y diseño el plan ideal para ti.</p></div>
       </div>
-      <div style="background:#f4f6fa;border:0.5px solid #b0bcd4;border-top:3px solid #1a3a6b;border-radius:12px;padding:1.5rem;">
-        <i class="ti ti-beach" style="font-size:28px;color:#1a3a6b;margin-bottom:12px;display:block;"></i>
-        <p style="font-weight:500;font-size:15px;color:#0d1f40;margin-bottom:8px;">Retiro Laboral Temprano</p>
-        <p style="font-size:13px;color:#666;line-height:1.6;margin-bottom:1rem;">Planifica tu independencia financiera y retírate antes de los 60 con ingresos asegurados.</p>
-        <a href="#formulario" class="wabtn" style="font-size:13px;padding:10px 16px;width:100%;justify-content:center;"><i class="ti ti-clipboard-list"></i> Me interesa</a>
+      <div class="card" style="display:flex;gap:14px;align-items:flex-start;">
+        <div class="icon-box" style="background:#e8f0ff;margin-bottom:0;flex-shrink:0;"><i class="ti ti-certificate" style="font-size:22px;color:#1a3a6b;"></i></div>
+        <div><p style="font-weight:700;font-size:14px;color:#0d1f40;">Coach John Maxwell</p><p style="font-size:13px;color:#778;margin-top:4px;line-height:1.5;">Liderazgo y visión de largo plazo en cada consulta.</p></div>
       </div>
-      <div style="background:#f4f6fa;border:0.5px solid #b0bcd4;border-top:3px solid #1a3a6b;border-radius:12px;padding:1.5rem;">
-        <i class="ti ti-school" style="font-size:28px;color:#1a3a6b;margin-bottom:12px;display:block;"></i>
-        <p style="font-weight:500;font-size:15px;color:#0d1f40;margin-bottom:8px;">Programa Universitario</p>
-        <p style="font-size:13px;color:#666;line-height:1.6;margin-bottom:1rem;">Asegura la educación universitaria de tus hijos desde hoy. La mejor herencia que puedes darles.</p>
-        <a href="#formulario" class="wabtn" style="font-size:13px;padding:10px 16px;width:100%;justify-content:center;"><i class="ti ti-clipboard-list"></i> Me interesa</a>
+      <div class="card" style="display:flex;gap:14px;align-items:flex-start;">
+        <div class="icon-box" style="background:#e8f0ff;margin-bottom:0;flex-shrink:0;"><i class="ti ti-world" style="font-size:22px;color:#1a3a6b;"></i></div>
+        <div><p style="font-weight:700;font-size:14px;color:#0d1f40;">Cobertura internacional</p><p style="font-size:13px;color:#778;margin-top:4px;line-height:1.5;">Planes que te protegen en Perú y en el mundo.</p></div>
       </div>
     </div>
   </div>
@@ -236,61 +240,109 @@
 
 <hr class="divider">
 
-<!-- SIMULADOR -->
-<div class="section" style="background:#f7f9fc;">
+<!-- ═══════════════════════════════ PRODUCTOS ═══════════════════════════════ -->
+<div class="section" style="background:#fff;">
   <div class="container">
-    <span class="tag">Simulador de inversión</span>
-    <h2 style="font-size:22px;font-weight:500;color:#0d1f40;margin-bottom:0.5rem;">¿Cuánto puede crecer tu dinero?</h2>
-    <p style="font-size:15px;color:#555;margin-bottom:2rem;">Ajusta los valores y mira el potencial de tu plan de Fondos Indexados.</p>
-    <div class="card" style="max-width:560px;">
+    <span class="tag">Soluciones</span>
+    <h2 style="font-size:24px;font-weight:700;color:#0d1f40;margin-bottom:.6rem;line-height:1.4;">Un plan para cada etapa<br><span style="color:#1a3a6b;">de tu vida.</span></h2>
+    <p style="font-size:15px;color:#556;margin-bottom:1.75rem;line-height:1.75;">Desde proteger a tu familia hoy, hasta asegurar tu retiro mañana.</p>
+    <div style="border-radius:16px;overflow:hidden;margin-bottom:2rem;max-height:200px;">
+      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=80" alt="Planes de inversión" style="width:100%;object-fit:cover;object-position:center 30%;filter:brightness(.88);">
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.25rem;">
+      <div class="product-card">
+        <div class="icon-box" style="background:linear-gradient(135deg,#e8f0ff,#d0dff8);"><i class="ti ti-heart-handshake" style="font-size:26px;color:#1a3a6b;"></i></div>
+        <p style="font-weight:700;font-size:16px;color:#0d1f40;margin-bottom:8px;">Seguro de Vida</p>
+        <p style="font-size:13px;color:#667;line-height:1.6;margin-bottom:1.25rem;">Protege a tu familia ante cualquier eventualidad. La red de seguridad que tu hogar necesita.</p>
+        <a href="#formulario" class="btn" style="font-size:13px;padding:10px 16px;width:100%;justify-content:center;" onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'});return false;">
+          <i class="ti ti-clipboard-list"></i> Me interesa
+        </a>
+      </div>
+      <div class="product-card">
+        <div class="icon-box" style="background:linear-gradient(135deg,#e8f8f0,#d0f0e0);"><i class="ti ti-chart-line" style="font-size:26px;color:#2a8a60;"></i></div>
+        <p style="font-weight:700;font-size:16px;color:#0d1f40;margin-bottom:8px;">Fondos Indexados</p>
+        <p style="font-size:13px;color:#667;line-height:1.6;margin-bottom:1.25rem;">Haz crecer tu dinero ligado al S&amp;P 500 y NASDAQ 100. Sin perder tu capital.</p>
+        <a href="#formulario" class="btn" style="font-size:13px;padding:10px 16px;width:100%;justify-content:center;" onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'});return false;">
+          <i class="ti ti-clipboard-list"></i> Me interesa
+        </a>
+      </div>
+      <div class="product-card">
+        <div class="icon-box" style="background:linear-gradient(135deg,#fff8e8,#ffecc8);"><i class="ti ti-beach" style="font-size:26px;color:#b07820;"></i></div>
+        <p style="font-weight:700;font-size:16px;color:#0d1f40;margin-bottom:8px;">Retiro Temprano</p>
+        <p style="font-size:13px;color:#667;line-height:1.6;margin-bottom:1.25rem;">Planifica tu libertad financiera y retírate antes de los 60 con ingresos asegurados.</p>
+        <a href="#formulario" class="btn" style="font-size:13px;padding:10px 16px;width:100%;justify-content:center;" onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'});return false;">
+          <i class="ti ti-clipboard-list"></i> Me interesa
+        </a>
+      </div>
+      <div class="product-card">
+        <div class="icon-box" style="background:linear-gradient(135deg,#f0e8ff,#e0d0ff);"><i class="ti ti-school" style="font-size:26px;color:#6030b0;"></i></div>
+        <p style="font-weight:700;font-size:16px;color:#0d1f40;margin-bottom:8px;">Programa Universitario</p>
+        <p style="font-size:13px;color:#667;line-height:1.6;margin-bottom:1.25rem;">Asegura la educación de tus hijos desde hoy. La mejor inversión que puedes hacer.</p>
+        <a href="#formulario" class="btn" style="font-size:13px;padding:10px 16px;width:100%;justify-content:center;" onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'});return false;">
+          <i class="ti ti-clipboard-list"></i> Me interesa
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════ SIMULADOR ═══════════════════════════════ -->
+<div class="section" style="background:#f8faff;">
+  <div class="container">
+    <span class="tag">Simulador</span>
+    <h2 style="font-size:24px;font-weight:700;color:#0d1f40;margin-bottom:.6rem;line-height:1.4;">¿Cuánto puede crecer<br><span style="color:#1a3a6b;">tu dinero?</span></h2>
+    <p style="font-size:15px;color:#556;margin-bottom:2rem;line-height:1.75;">Mueve los controles y descubre el potencial de tu ahorro.</p>
+    <div style="background:#fff;border:1.5px solid #e4eaf5;border-radius:18px;padding:2rem;max-width:560px;box-shadow:0 10px 40px rgba(26,58,107,.08);">
       <div style="margin-bottom:1.5rem;">
-        <label style="font-size:14px;color:#555;display:block;margin-bottom:6px;">Ahorro mensual: <strong id="monto-label" style="color:#0d1f40;">$200</strong></label>
+        <label style="font-size:14px;color:#445;display:block;margin-bottom:8px;font-weight:600;">Ahorro mensual: <strong id="monto-label" style="color:#1a3a6b;">$200</strong></label>
         <input type="range" min="100" max="1000" step="50" value="200" id="monto">
       </div>
       <div style="margin-bottom:1.5rem;">
-        <label style="font-size:14px;color:#555;display:block;margin-bottom:6px;">Años de ahorro: <strong id="años-label" style="color:#0d1f40;">15 años</strong></label>
+        <label style="font-size:14px;color:#445;display:block;margin-bottom:8px;font-weight:600;">Años de ahorro: <strong id="años-label" style="color:#1a3a6b;">15 años</strong></label>
         <input type="range" min="5" max="35" step="1" value="15" id="años">
       </div>
-      <div style="background:#0d1f40;border-radius:10px;padding:1.25rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+      <div style="background:linear-gradient(135deg,#071528,#0e2848);border-radius:14px;padding:1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
         <div style="text-align:center;">
-          <p style="font-size:12px;color:#8a9ec0;margin-bottom:4px;">Total aportado</p>
-          <p id="aportado" style="font-size:20px;font-weight:500;color:#c0cfe8;">$36,000</p>
+          <p style="font-size:11px;color:#6a8caa;margin-bottom:6px;font-weight:600;letter-spacing:.07em;">TOTAL APORTADO</p>
+          <p id="aportado" style="font-size:24px;font-weight:700;color:#a8c8f0;">$36,000</p>
         </div>
-        <div style="text-align:center;">
-          <p style="font-size:12px;color:#8a9ec0;margin-bottom:4px;">Valor estimado</p>
-          <p id="resultado" style="font-size:20px;font-weight:500;color:#7dd4a8;">$76,434</p>
+        <div style="text-align:center;border-left:1px solid rgba(255,255,255,.08);padding-left:1rem;">
+          <p style="font-size:11px;color:#6a8caa;margin-bottom:6px;font-weight:600;letter-spacing:.07em;">VALOR ESTIMADO</p>
+          <p id="resultado" style="font-size:24px;font-weight:700;color:#7dd4a8;">$76,434</p>
         </div>
       </div>
-      <p style="font-size:12px;color:#888;margin-top:1rem;line-height:1.5;">* Proyección referencial basada en rendimiento histórico del S&P 500. No garantiza rendimiento futuro.</p>
+      <p style="font-size:12px;color:#aaa;margin-top:1rem;line-height:1.5;">* Proyección referencial basada en rendimiento histórico del S&amp;P 500. No garantiza rendimiento futuro.</p>
     </div>
   </div>
 </div>
 
 <hr class="divider">
 
-<!-- ENCUESTA -->
+<!-- ═══════════════════════════════ FORMULARIO ═══════════════════════════════ -->
 <div id="formulario" class="section" style="background:#fff;">
   <div class="container">
-    <span class="tag">Formulario de contacto</span>
-    <h2 style="font-size:22px;font-weight:500;color:#0d1f40;margin-bottom:0.5rem;">Cuéntame sobre ti</h2>
-    <p style="font-size:15px;color:#555;margin-bottom:2rem;">Completa el formulario y me pondré en contacto contigo a la brevedad.</p>
-    <div class="card" style="max-width:560px;">
+    <span class="tag">Contáctame</span>
+    <h2 style="font-size:24px;font-weight:700;color:#0d1f40;margin-bottom:.6rem;line-height:1.4;">Da el primer paso<br><span style="color:#1a3a6b;">hacia tu libertad financiera.</span></h2>
+    <p style="font-size:15px;color:#556;margin-bottom:2rem;line-height:1.75;">Completa el formulario y te contactaré personalmente para diseñar tu plan ideal. Sin compromiso.</p>
+    <div style="background:#f8faff;border:1.5px solid #e4eaf5;border-radius:18px;padding:2rem;max-width:560px;box-shadow:0 10px 40px rgba(26,58,107,.06);">
       <div style="margin-bottom:1.25rem;">
-        <label style="font-size:13px;color:#555;display:block;margin-bottom:6px;">Nombre completo *</label>
+        <label style="font-size:13px;color:#334;display:block;margin-bottom:7px;font-weight:700;">Nombre completo *</label>
         <input type="text" id="f-nombre" placeholder="Ej: Juan García">
       </div>
-      <div class="grid-2" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.25rem;">
+      <div class="grid2" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.25rem;">
         <div>
-          <label style="font-size:13px;color:#555;display:block;margin-bottom:6px;">Edad *</label>
+          <label style="font-size:13px;color:#334;display:block;margin-bottom:7px;font-weight:700;">Edad *</label>
           <input type="number" id="f-edad" placeholder="Ej: 35" min="18" max="80">
         </div>
         <div>
-          <label style="font-size:13px;color:#555;display:block;margin-bottom:6px;">País / Ciudad *</label>
+          <label style="font-size:13px;color:#334;display:block;margin-bottom:7px;font-weight:700;">País / Ciudad *</label>
           <input type="text" id="f-ciudad" placeholder="Ej: Lima, Perú">
         </div>
       </div>
       <div style="margin-bottom:1.25rem;">
-        <label style="font-size:13px;color:#555;display:block;margin-bottom:6px;">Producto de interés *</label>
+        <label style="font-size:13px;color:#334;display:block;margin-bottom:7px;font-weight:700;">Producto de interés *</label>
         <select id="f-producto">
           <option value="">Selecciona una opción</option>
           <option>Seguro de Vida</option>
@@ -301,15 +353,15 @@
         </select>
       </div>
       <div style="margin-bottom:1.25rem;">
-        <label style="font-size:13px;color:#555;display:block;margin-bottom:6px;">¿Tienes algún seguro actualmente? *</label>
+        <label style="font-size:13px;color:#334;display:block;margin-bottom:7px;font-weight:700;">¿Tienes algún seguro actualmente? *</label>
         <div style="display:flex;gap:16px;flex-wrap:wrap;">
           <label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#0d1f40;cursor:pointer;"><input type="radio" name="seguro" value="Sí"> Sí</label>
           <label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#0d1f40;cursor:pointer;"><input type="radio" name="seguro" value="No"> No</label>
           <label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#0d1f40;cursor:pointer;"><input type="radio" name="seguro" value="No estoy seguro"> No estoy seguro</label>
         </div>
       </div>
-      <div style="margin-bottom:1.5rem;">
-        <label style="font-size:13px;color:#555;display:block;margin-bottom:6px;">Presupuesto mensual aproximado (USD) *</label>
+      <div style="margin-bottom:1.75rem;">
+        <label style="font-size:13px;color:#334;display:block;margin-bottom:7px;font-weight:700;">Presupuesto mensual aproximado (USD) *</label>
         <select id="f-presupuesto">
           <option value="">Selecciona una opción</option>
           <option>Menos de $100</option>
@@ -319,76 +371,71 @@
           <option>Más de $700</option>
         </select>
       </div>
-      <div id="f-error" style="display:none;background:#fce8e8;color:#7a1f1f;border-radius:8px;padding:10px 14px;font-size:13px;margin-bottom:1rem;">Por favor completa todos los campos antes de enviar.</div>
-      <button onclick="enviarWA()" class="wabtn" style="width:100%;justify-content:center;font-size:15px;padding:14px;">
-        <i class="ti ti-brand-whatsapp" style="font-size:20px;"></i>
-        Enviar por WhatsApp
+      <div id="f-error" style="display:none;background:#fce8e8;color:#7a1f1f;border-radius:10px;padding:12px 16px;font-size:13px;margin-bottom:1rem;font-weight:500;">Por favor completa todos los campos antes de enviar.</div>
+      <button onclick="enviarWA()" class="btn" style="width:100%;justify-content:center;font-size:15px;padding:17px;font-weight:700;">
+        <i class="ti ti-brand-whatsapp" style="font-size:21px;"></i>
+        Enviar y hablar con Esteban
       </button>
-      <p style="font-size:12px;color:#888;margin-top:10px;text-align:center;">Se abrirá WhatsApp con tu información lista para enviar.</p>
+      <p style="font-size:12px;color:#aaa;margin-top:10px;text-align:center;">Se abrirá WhatsApp con tu información lista para enviar.</p>
     </div>
   </div>
 </div>
 
 <hr class="divider">
 
-<!-- CTA FINAL -->
-<div style="background:#0d1f40;padding:3.5rem 2rem;text-align:center;border-top:3px solid #4a6fa5;">
-  <div style="max-width:600px;margin:0 auto;">
-    <span class="tag" style="background:#1a3a6b;color:#b8c8e8;margin-bottom:1rem;display:inline-block;">¿Listo para empezar?</span>
-    <h2 style="font-size:24px;font-weight:500;color:#e8edf5;margin-bottom:1rem;line-height:1.4;">Agenda tu asesoría gratuita hoy</h2>
-    <p style="font-size:15px;color:#8a9ec0;line-height:1.7;margin-bottom:2rem;">Conversemos sobre tus metas financieras y encuentra el plan ideal para ti y tu familia. Sin compromiso.</p>
-    <a href="#formulario" class="wabtn wabtn-lg">
+<!-- ═══════════════════════════════ CTA FINAL ═══════════════════════════════ -->
+<div style="background:linear-gradient(145deg,#030c1c,#091830,#0e2848);padding:4.5rem 2rem;text-align:center;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;pointer-events:none;">
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;border-radius:50%;border:1px solid rgba(100,180,255,.05);"></div>
+    <div style="position:absolute;top:-60px;right:-60px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(42,88,168,.14) 0%,transparent 70%);"></div>
+  </div>
+  <div style="max-width:580px;margin:0 auto;position:relative;">
+    <span class="tag" style="background:rgba(100,180,255,.1);color:#64b4ff;border:1px solid rgba(100,180,255,.2);">¿Listo para empezar?</span>
+    <h2 style="font-size:28px;font-weight:700;color:#f0f4ff;margin:.75rem 0 1rem;line-height:1.4;">El mejor momento para asegurar<br>tu futuro <span class="hl">es hoy.</span></h2>
+    <p style="font-size:15px;color:#7a9ec0;line-height:1.75;margin-bottom:2.25rem;">Cada día que pasa es una oportunidad que no vuelve. Hablemos y diseñemos juntos tu plan.</p>
+    <a href="#formulario" class="btn btn-lg glow" onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'});return false;">
       <i class="ti ti-clipboard-list" style="font-size:22px;"></i>
       Solicitar asesoría gratuita
     </a>
-    <p style="font-size:13px;color:#5a7090;margin-top:1.25rem;">Completa el formulario y te contactamos a la brevedad</p>
+    <p style="font-size:13px;color:#3d6080;margin-top:1.25rem;">+51 960 112 040 · Lima, Perú</p>
   </div>
 </div>
 
 <!-- FOOTER -->
-<div style="background:#080f1e;padding:1.5rem 2rem;text-align:center;">
-  <p style="font-size:13px;color:#3d5070;">© 2026 Esteban Peralta · Agente de Seguros e Inversiones</p>
+<div style="background:#020810;padding:1.5rem 2rem;text-align:center;border-top:1px solid rgba(100,180,255,.05);">
+  <p style="font-size:13px;color:#2a4060;">© 2026 Esteban Peralta · Agente de Seguros e Inversiones</p>
 </div>
 
 <script>
-  const monto = document.getElementById('monto');
-  const años = document.getElementById('años');
-  const montoLabel = document.getElementById('monto-label');
-  const añosLabel = document.getElementById('años-label');
-  const aportado = document.getElementById('aportado');
-  const resultado = document.getElementById('resultado');
-
-  function fmt(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
-
-  function calcular() {
-    const m = parseInt(monto.value), a = parseInt(años.value);
-    const total = m * 12 * a;
-    let acum = 0;
-    for (let i = 0; i < a * 12; i++) acum = (acum + m) * (1 + 0.085 / 12);
-    montoLabel.textContent = fmt(m);
-    añosLabel.textContent = a + ' años';
-    aportado.textContent = fmt(total);
-    resultado.textContent = fmt(acum);
+  const monto=document.getElementById('monto'),años=document.getElementById('años');
+  const montoLabel=document.getElementById('monto-label'),añosLabel=document.getElementById('años-label');
+  const aportado=document.getElementById('aportado'),resultado=document.getElementById('resultado');
+  function fmt(n){return '$'+Math.round(n).toLocaleString('en-US');}
+  function calcular(){
+    const m=parseInt(monto.value),a=parseInt(años.value);
+    let acum=0;
+    for(let i=0;i<a*12;i++) acum=(acum+m)*(1+0.085/12);
+    montoLabel.textContent=fmt(m);
+    añosLabel.textContent=a+' años';
+    aportado.textContent=fmt(m*12*a);
+    resultado.textContent=fmt(acum);
   }
-
-  function enviarWA() {
-    const nombre = document.getElementById('f-nombre').value.trim();
-    const edad = document.getElementById('f-edad').value.trim();
-    const ciudad = document.getElementById('f-ciudad').value.trim();
-    const producto = document.getElementById('f-producto').value;
-    const presupuesto = document.getElementById('f-presupuesto').value;
-    const seguroEl = document.querySelector('input[name="seguro"]:checked');
-    const err = document.getElementById('f-error');
-    if (!nombre || !edad || !ciudad || !producto || !presupuesto || !seguroEl) { err.style.display = 'block'; return; }
-    err.style.display = 'none';
-    const msg = `Hola Esteban, completé el formulario de tu página:%0A%0A👤 *Nombre:* ${encodeURIComponent(nombre)}%0A🎂 *Edad:* ${encodeURIComponent(edad)}%0A📍 *Ciudad:* ${encodeURIComponent(ciudad)}%0A📋 *Producto de interés:* ${encodeURIComponent(producto)}%0A🛡️ *¿Tiene seguro actualmente?:* ${encodeURIComponent(seguroEl.value)}%0A💰 *Presupuesto mensual:* ${encodeURIComponent(presupuesto)}%0A%0AMe gustaría recibir más información.`;
-    window.open(`https://wa.me/51960112040?text=${msg}`, '_blank');
+  function enviarWA(){
+    const nombre=document.getElementById('f-nombre').value.trim();
+    const edad=document.getElementById('f-edad').value.trim();
+    const ciudad=document.getElementById('f-ciudad').value.trim();
+    const producto=document.getElementById('f-producto').value;
+    const presupuesto=document.getElementById('f-presupuesto').value;
+    const seguroEl=document.querySelector('input[name="seguro"]:checked');
+    const err=document.getElementById('f-error');
+    if(!nombre||!edad||!ciudad||!producto||!presupuesto||!seguroEl){err.style.display='block';return;}
+    err.style.display='none';
+    const msg=`Hola Esteban, completé el formulario de tu página:%0A%0A👤 *Nombre:* ${encodeURIComponent(nombre)}%0A🎂 *Edad:* ${encodeURIComponent(edad)}%0A📍 *Ciudad:* ${encodeURIComponent(ciudad)}%0A📋 *Producto de interés:* ${encodeURIComponent(producto)}%0A🛡️ *¿Tiene seguro actualmente?:* ${encodeURIComponent(seguroEl.value)}%0A💰 *Presupuesto mensual:* ${encodeURIComponent(presupuesto)}%0A%0AMe gustaría recibir más información.`;
+    window.open(`https://wa.me/51960112040?text=${msg}`,'_blank');
   }
-
-  monto.addEventListener('input', calcular);
-  años.addEventListener('input', calcular);
+  monto.addEventListener('input',calcular);
+  años.addEventListener('input',calcular);
   calcular();
 </script>
-
 </body>
 </html>
